@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container" id="loginContainer">
+  <div class="box">
+    <h1>Echo</h1>
+    <form id="loginForm">
+      <input type="text" id="apiToken" placeholder="Indtast dit API-token" required>
+      <button type="submit">Log ind</button>
+    </form>
+    <p class="info">Indtast API token for at få adgang til Echo</p>
+  </div>
+</div>
+
+<div class="menu" id="menuContainer" style="display: none;">
+  <div class="menu-left">
+    <div class="dropdown">
+      <button class="dropbtn">API Funktioner</button>
+      <div class="dropdown-content">
+        <a href="#" id="getCertificateLink">Get Certificate</a>
+        <a href="#" id="freezeLink">Freeze</a>
+        <a href="#" id="tagsLink">Tags</a>
+        <a href="#" id="sendMessageLink">Send Message</a>
+        <a href="#" id="enableLostModeLink">Enable Lost Mode</a>
+        <a href="#" id="getIntegrationLink">Get Integration</a>
+        <a href="#" id="getSoftwareInventoryLink">Software Inventory</a>
+        <a href="#" id="getLegalAssetStatesLink">Legal Asset States</a>
+        <a href="#" id="setDeviceAssetStateLink">Set Device Asset State</a>
+        <a href="#" id="getDeviceStatesLink">Get Device States</a>
+        <a href="#" id="unfreezeLink">Unfreeze</a>
+        <a href="#" id="addTagLink">Add Tag</a>
+      </div>
+    </div>
+  </div>
+  <div class="menu-center">
+    <input type="text" id="serialNumberInput" placeholder="Serial Number">
+    <input type="text" id="codeInput" placeholder="Code">
+    <input type="text" id="stateInput" placeholder="State">
+  </div>
+  <div class="menu-right">
+    <select id="apiEndpointSelect">
+      <option value="https://api.netcloud-test.net">Test</option>
+      <option value="https://api.device-dev.net">Dev</option>
+    </select>
+  </div>
+</div>
+
+<div class="content">
+  <div id="result"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
